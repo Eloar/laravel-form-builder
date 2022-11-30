@@ -3,6 +3,14 @@
 use Kris\LaravelFormBuilder\Fields\FormField;
 use Kris\LaravelFormBuilder\Form;
 
+if (!function_exists('labelBlockPath'))
+{
+    function labelBlockPath()
+    {
+        return getFormBuilderViewPath('label.php');
+    }
+}
+
 if (!function_exists('form')) {
 
     function form(Form $form, array $options = [])
