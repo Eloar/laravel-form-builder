@@ -153,7 +153,7 @@ class CollectionType extends ParentType
 
         $firstFieldOptions = $this->formHelper->mergeOptions(
             $this->getOption('options'),
-            ['attr' => ['id' => $newFieldName]]
+            ['attr' => array_merge(['id' => $newFieldName], $this->getOption('attr'))]
         );
 
         $field->setName($newFieldName);
